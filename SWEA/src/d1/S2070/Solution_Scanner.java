@@ -28,6 +28,8 @@ public class Solution_Scanner {
 			sb.append("\n");
 		}
 		System.out.println(sb);
+		
+		sc.close();
 
 	}
 
