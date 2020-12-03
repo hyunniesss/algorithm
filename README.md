@@ -119,6 +119,12 @@
         <td></td>
         <td></td>
     </tr>
+    <tr>
+    	<td>Q1545 거꾸로 출력해 보아요</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
 
