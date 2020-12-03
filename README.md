@@ -107,6 +107,12 @@
         <td></td>
         <td></td>
     </tr>
+    <tr>
+    	<td>Q1936 1대1 가위바위보</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
 
