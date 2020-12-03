@@ -77,6 +77,12 @@
         <td></td>
         <td></td>
     </tr>
+    <tr>
+    	<td>Q2029 몫과 나머지 출력하기</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
 
