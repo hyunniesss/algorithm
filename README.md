@@ -12,21 +12,63 @@
         <th>D4</th>
     </tr>
     <tr>
-    	<td></td>
+    	<td>Q2072 홀수만 더하기</td>
         <td></td>
         <td>Q10912 외로운 문자</td>
         <td></td>
     </tr>
     <tr>
-    	<td></td>
+    	<td>Q2071 평균값 구하기</td>
         <td></td>
         <td>Q10804 문자열의 거울상</td>
         <td></td>
     </tr>
     <tr>
-    	<td></td>
+    	<td>Q2070 큰 놈, 작은 놈, 같은 놈</td>
         <td></td>
         <td>Q10726 이진수 표현</td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td>Q2068 최대수 구하기</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td>Q2063 중간값 찾기</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td>Q2058 자릿수 더하기</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td>Q2056 연월일 달력</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td>Q2050 알파벳을 숫자로 변환</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td>Q2047 신문 헤드라인</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td>Q2046 스탬프 찍기</td>
+        <td></td>
+        <td></td>
         <td></td>
     </tr>
 </table>
