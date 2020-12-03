@@ -83,6 +83,12 @@
         <td></td>
         <td></td>
     </tr>
+    <tr>
+    	<td>Q2027 대각선 출력하기</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
 
