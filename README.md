@@ -95,6 +95,12 @@
         <td></td>
         <td></td>
     </tr>
+    <tr>
+    	<td>Q1938 아주 간단한 계산기</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
 
