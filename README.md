@@ -23,6 +23,12 @@
         <td>Q10804 문자열의 거울상</td>
         <td></td>
     </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td>Q10726 이진수 표현</td>
+        <td></td>
+    </tr>
 </table>
 
 
