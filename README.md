@@ -38,7 +38,7 @@
         <td></td>
         <td></td>
         <td>Q1026 보물</td>
-        <td>Q2751 수 정렬하기2</td>
+        <td>Q2751 수 정렬하기 2</td>
     </tr>
     <tr>
     	<td></td>
@@ -79,7 +79,14 @@
     	<td></td>
         <td></td>
         <td></td>
-        <td>Q10989 수 정렬하기3</td>
+        <td>Q10989 수 정렬하기 3</td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td>Q10816 숫자 카드 2</td>
         <td></td>
     </tr>
 </table>
