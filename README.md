@@ -38,35 +38,35 @@
         <td></td>
         <td></td>
         <td>Q1026 보물</td>
-        <td>Q2751 수 정렬하기2</td>
+        <td>Q2751 수 정렬하기 2</td>
     </tr>
     <tr>
     	<td></td>
         <td></td>
         <td></td>
         <td>Q1920 수 찾기</td>
-        <td></td>
+        <td>Q1181 단어 정렬</td>
     </tr>
     <tr>
     	<td></td>
         <td></td>
         <td></td>
         <td>Q10815 숫자 카드</td>
-        <td></td>
+        <td>Q11650 좌표 정렬하기</td>
     </tr>
     <tr>
     	<td></td>
         <td></td>
         <td></td>
         <td>Q10828 스택</td>
-        <td></td>
+        <td>Q11651 좌표 정렬하기 2</td>
     </tr>
     <tr>
     	<td></td>
         <td></td>
         <td></td>
         <td>Q10845 큐</td>
-        <td></td>
+        <td>Q10867 중복 빼고 정렬하기</td>
     </tr>
     <tr>
     	<td></td>
@@ -79,10 +79,18 @@
     	<td></td>
         <td></td>
         <td></td>
-        <td>Q10989 수 정렬하기3</td>
+        <td>Q10989 수 정렬하기 3</td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td>Q10816 숫자 카드 2</td>
         <td></td>
     </tr>
 </table>
+
 
 
 
