@@ -73,7 +73,7 @@
         <td></td>
         <td></td>
         <td>Q10866 덱</td>
-        <td></td>
+        <td>Q1158 요세푸스 문제</td>
     </tr>
     <tr>
     	<td></td>
