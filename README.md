@@ -89,7 +89,15 @@
         <td>Q10816 숫자 카드 2</td>
         <td></td>
     </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td>Q9012 괄호</td>
+        <td></td>
+    </tr>
 </table>
+
 
 
 
