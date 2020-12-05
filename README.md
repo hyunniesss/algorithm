@@ -36,7 +36,7 @@
     <tr>
     	<td></td>
         <td></td>
-        <td></td>
+        <td>Q1874 스택 수열</td>
         <td>Q1026 보물</td>
         <td>Q2751 수 정렬하기 2</td>
     </tr>
@@ -73,7 +73,7 @@
         <td></td>
         <td></td>
         <td>Q10866 덱</td>
-        <td></td>
+        <td>Q1158 요세푸스 문제</td>
     </tr>
     <tr>
     	<td></td>
@@ -89,7 +89,15 @@
         <td>Q10816 숫자 카드 2</td>
         <td></td>
     </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td>Q9012 괄호</td>
+        <td></td>
+    </tr>
 </table>
+
 
 
 
