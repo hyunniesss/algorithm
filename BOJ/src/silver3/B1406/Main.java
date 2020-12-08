@@ -2,36 +2,81 @@ package silver3.B1406;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.StringTokenizer;
 
-/**
- * 
- * @author hyunhee 
- * L : 커서를 왼쪽으로 한 칸 옮김 (커서가 문장의 맨 앞이면 무시됨) 
- * D : 커서를 오른쪽으로 한 칸 옮김(커서가 문장의 맨 뒤이면 무시됨) 
- * B : 커서 왼쪽에 있는 문자를 삭제함 (커서가 문장의 맨 앞이면 무시됨) 
- * 		삭제로 인해 커서는 한 칸 왼쪽으로 이동한 것처럼 나타나지만, 실제로 커서의 오른쪽에 있던 문자는 그대로임 
- * P $ : $라는 문자를 커서 왼쪽에 추가함
- */
-
 public class Main {
-	
-	
-	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));	
-		String input = br.readLine();
-		int M = Integer.parseInt(br.readLine());
-		int cur = input.length();
-		while(M-- > 0) {
-			StringTokenizer str = new StringTokenizer(br.readLine()," ");
-			switch(str.nextToken()) {
-			case "L":
-				cur = cur > 0 ? cur-1 : cur;
-				break;
-			case "D":
-				
+
+	static class Editor {
+		List<Character> list = new LinkedList<>();
+		ListIterator<Character> iter = list.listIterator(list.size());
+
+		Editor(String input) {
+			for (char c : input.toCharArray()) {
+				P(c);
 			}
 		}
+
+		void P(char c) {
+			iter.add(c);
+		}
+
+		void B() {
+			if (iter.hasPrevious()) {
+				iter.previous();
+				iter.remove();
+			}
+		}
+
+		void D() {
+			if (iter.hasNext()) {
+				iter.next();
+			}
+		}
+
+		void L() {
+			if (iter.hasPrevious()) {
+				iter.previous();
+			}
+		}
+
+		String print() {
+			StringBuilder sb = new StringBuilder();
+			for (char c : list) {
+				sb.append(c);
+			}
+			return sb.toString();
+		}
+	}
+
+	public static void main(String[] args) throws Exception {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input = br.readLine();
+		Editor editor = new Editor(input);
+		int M = Integer.parseInt(br.readLine());
+		while(M-- > 0) {
+			char[] temp = br.readLine().toCharArray();
+			
+			switch(temp[0]) {
+			case 'P':
+				editor.P(temp[2]);
+				break;
+			case 'B':
+				editor.B();
+				break;
+			case 'D':
+				editor.D();
+				break;
+			case 'L':
+				editor.L();
+				break;
+			}
+		}
+		System.out.println(editor.print());
+
 	}
 
 }
