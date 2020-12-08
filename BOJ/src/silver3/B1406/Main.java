@@ -5,11 +5,11 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
-import java.util.StringTokenizer;
 
 public class Main {
 
 	static class Editor {
+		
 		List<Character> list = new LinkedList<>();
 		ListIterator<Character> iter = list.listIterator(list.size());
 
