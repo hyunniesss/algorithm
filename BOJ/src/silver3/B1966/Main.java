@@ -3,60 +3,56 @@ package silver3.B1966;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
 public class Main {
 
+	static List<int[]> queue = new ArrayList<>(); // index, 중요도
 	static int TC;
+	static int N, M;
 	static StringBuilder sb = new StringBuilder();
-	static List<int[]> list = new ArrayList<>();
 
 	public static void main(String[] args) throws Exception {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		TC = Integer.parseInt(br.readLine());
-		while (TC-- > 0) {
-			StringTokenizer str = new StringTokenizer(br.readLine());
-			int N = Integer.parseInt(str.nextToken());
-			int M = Integer.parseInt(str.nextToken()); // 목표위치
-
-			str = new StringTokenizer(br.readLine());
-			int index = 0;
-			while (str.hasMoreTokens()) {
-				int[] cur = new int[] { index, Integer.parseInt(str.nextToken()) };
-				index++;
-				list.add(cur);
-			}
+		out: for (int t = 0; t < TC; t++) {
+//			System.out.println("#" + t);
 			int answer = 0;
-			boolean flag = true;
+			queue.clear();
+			StringTokenizer str = new StringTokenizer(br.readLine(), " ");
+			N = Integer.parseInt(str.nextToken()); // 문서의 갯수
+			M = Integer.parseInt(str.nextToken()); // 목표 위치
+			str = new StringTokenizer(br.readLine(), " ");
+			for (int n = 0; n < N; n++) {
+				queue.add(new int[] { n, Integer.parseInt(str.nextToken()) });
+			}
 			do {
-				int[] cur = list.get(0);
-				flag = true;
-				for (int i = 1; i < list.size(); i++) {
-					if (list.get(i)[1] > cur[1]) {
-						list.remove(0);
-						list.add(cur);
-						flag = false;
-						break;
-					}
-					if(flag) {
-						int[] r = list.remove(0);
-						if(r[0] == M) {
-							answer++;
-							flag = true;
-							break;
-						} else {
-							flag = false;
-							answer++;
-						}
-					}
+//				System.out.println();
+//				for (int[] qu : queue) {
+//					System.out.print(Arrays.toString(qu) + " ");
+//				}
+				int[] out = queue.get(0);
+				int idx = 1;
+				while (idx < queue.size() && queue.get(idx)[1] <= out[1]) {
+					idx++;
 				}
-			} while (!flag);
-			
-			sb.append(answer).append("\n");
+				if (idx == queue.size()) {
+					if (out[0] == M) {
+						sb.append(answer + 1).append("\n");
+						continue out;
+					} else {
+						queue.remove(0);
+						answer++;
+					}
+				} else {
+					queue.add(queue.remove(0));
+				}
+			} while (queue.size()>0);
 		}
-		System.out.println(sb);
+		System.out.println(sb.toString());
 
 	}
 
