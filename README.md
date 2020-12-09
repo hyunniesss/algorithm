@@ -96,6 +96,13 @@
         <td>Q9012 괄호</td>
         <td></td>
     </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td>Q1978 소수 찾기</td>
+        <td></td>
+    </tr>
 </table>
 
 
