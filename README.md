@@ -128,6 +128,13 @@
         <td></td>
         <td></td>
         <td></td>
+        <td>Q9663 N-Queen</td>
+    </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td></td>
     </tr>
 </table>
