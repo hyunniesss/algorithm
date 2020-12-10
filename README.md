@@ -1,6 +1,6 @@
 # algorithm ( JAVA )
 
-### BOJ 
+## BOJ 
 
 #### BRONZE
 
@@ -64,7 +64,7 @@
     <tr>
     	<td></td>
         <td></td>
-        <td></td>
+        <td>Q14889 스타트와 링크</td>
         <td>Q10845 큐</td>
         <td>Q10867 중복 빼고 정렬하기</td>
     </tr>
@@ -101,6 +101,48 @@
         <td></td>
         <td></td>
         <td>Q1978 소수 찾기</td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td>Q2485 가로수</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+#### GOLD
+
+<table>
+    <tr>
+    	<th>GOLD 1</th>
+        <th>GOLD 2</th>
+        <th>GOLD 3</th>
+        <th>GOLD 4</th>
+        <th>GOLD 5</th>
+    </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Q15686 치킨 배달</td>
+    </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Q9663 N-Queen</td>
+    </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td></td>
     </tr>
 </table>
