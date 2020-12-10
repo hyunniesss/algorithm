@@ -103,7 +103,15 @@
         <td>Q1978 소수 찾기</td>
         <td></td>
     </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td>Q2485 가로수</td>
+        <td></td>
+    </tr>
 </table>
+
 
 
 #### GOLD

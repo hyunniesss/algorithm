@@ -26,23 +26,6 @@ public class Main {
 			return;
 		}
 		// 1. 퀸 하나 놓고 주변에 퀸 못놓는 자리 다 제거
-//		for (int r = 0; r < N; r++) {
-//			for (; c < N; c++) {
-//				if (map[r][c] == 0) {
-//					makeMap(r, c, cnt);
-//					System.out.println("BEFORE : #" + cnt);
-//					for (int[] ma : map) {
-//						System.out.println(Arrays.toString(ma));
-//					}
-//					dfs(cnt + 1, r, c + 1);
-//					makeMap(cnt * (-1));
-//					System.out.println("AFTER : #" + cnt);
-//					for (int[] ma : map) {
-//						System.out.println(Arrays.toString(ma));
-//					}
-//				}
-//			}
-//		}
 		for (int c = 0; c < N; c++) {
 			if (map[cnt - 1][c] == 0) {
 				makeMap(cnt - 1, c, cnt);
