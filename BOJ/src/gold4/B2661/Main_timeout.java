@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  */
 
-public class Main {
+public class Main_timeout {
 
 	static int N;
 	static char[] number;
