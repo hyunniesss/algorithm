@@ -34,7 +34,7 @@
         <th>SILVER 5</th>
     </tr>
     <tr>
-    	<td></td>
+    	<td>Q6588 골드바흐의 추측</td>
         <td>Q5430 AC</td>
         <td>Q1874 스택 수열</td>
         <td>Q1026 보물</td>
