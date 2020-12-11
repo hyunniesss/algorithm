@@ -3,7 +3,7 @@ package gold4.B2661;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Main_fail {
+public class Main {
 
 	static int N;
 	static String answer = "";
