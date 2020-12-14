@@ -26,7 +26,7 @@ public class Main {
 
 	private static void bfs() {
 		Queue<int[]> queue = new LinkedList<>(); // 위치, 이동횟수
-		queue.offer(new int[] { N, 0, Math.abs(K - N) });
+		queue.offer(new int[] { N, 0 });
 		check[N] = true;
 
 		while (!queue.isEmpty()) {
