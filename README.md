@@ -92,7 +92,7 @@
     <tr>
     	<td></td>
         <td></td>
-        <td></td>
+        <td>Q1463 1로 만들기</td>
         <td>Q9012 괄호</td>
         <td></td>
     </tr>
