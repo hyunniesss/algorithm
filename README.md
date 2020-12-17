@@ -139,7 +139,7 @@
     	<td></td>
         <td></td>
         <td></td>
-        <td></td>
+        <td>Q2206 벽 부수고 이동하기</td>
         <td>Q9663 N-Queen</td>
     </tr>
     <tr>
@@ -150,6 +150,7 @@
         <td></td>
     </tr>
 </table>
+
 
 
 
