@@ -1,72 +1,45 @@
 package gold4.B2661;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
-/**
- * @author hyunhee N은 1 이상 80 이하
- *
- */
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Main {
 
 	static int N;
-	static char[] number;
+	static String answer = "";
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
-		Scanner sc = new Scanner(System.in);
-
-		N = sc.nextInt();
-		number = new char[N];
-		number[0] = '1';
-		makeNumber(1);
-
-		sc.close();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		N = Integer.parseInt(br.readLine());
+		makeNumber();
 
 	}
 
-	private static void makeNumber(int cnt) {
-		if (cnt == N) {
-			boolean flag = test();
-			if (flag) {
-				StringBuilder sb = new StringBuilder();
-				for (char c : number) {
-					sb.append(c);
-				}
-				System.out.println(sb);
-				System.exit(0);
-			}
-			return;
+	private static void makeNumber() {
+		
+		if (answer.length() == N) {
+			System.out.println(answer);
+			System.exit(0);
 		}
-		for (int i = 1; i <= 3; i++) {
-			if (number[cnt - 1] - '0' != i) {
-				number[cnt] = (char) ('0' + i);
-				makeNumber(cnt + 1);
+		for (int i = 1; i < 4; i++) {
+			answer += (i + "");
+			if (test()) {
+				makeNumber();
 			}
+			answer = answer.substring(0, answer.length() - 1);
+
 		}
+
 	}
 
 	private static boolean test() {
-		boolean flag = true;
-		for (int i = 0; i <= N/2; i++) {
-			for (int j = i + 1; j < N; j++) {
-				if (number[i] == number[j]) {
-					flag = false;
-					for (int k = 1; k < j - i; k++) {
-						if (j + k >= N) {
-							return true;
-						}
-						if (number[i + k] == number[j + k]) {
-							flag = false;
-						} else {
-							flag = true;
-							break;
-						}
-					}
-					if (!flag)
-						return flag;
-				}
+		int len = answer.length();
+		for (int i = 1; i < answer.length() / 2 + 1; i++) {
+			String prev = answer.substring(len - i - i, len - i);
+			String next = answer.substring(len - i);
+			if (next.equals(prev)) {
+				return false;
 			}
 		}
 		return true;
