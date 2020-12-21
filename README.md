@@ -241,5 +241,12 @@
         <td></td>
         <td></td>
     </tr>
+    <tr>
+    	<td>실패율</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
