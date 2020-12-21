@@ -212,3 +212,34 @@
 
 ### programmers
 
+<table style="text-align: center;">
+    <tr>
+    	<th>LEVEL 1</th>
+        <th>LEVEL 2</th>
+        <th>LEVEL 3</th>
+        <th>LEVEL 4</th>
+        <th>LEVEL 5</th>
+    </tr>
+    <tr>
+    	<td>내적</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td>3진법 뒤집기</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td>키패드 누르기</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
