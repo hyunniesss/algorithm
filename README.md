@@ -248,5 +248,12 @@
         <td></td>
         <td></td>
     </tr>
+    <tr>
+    	<td>다트게임</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
