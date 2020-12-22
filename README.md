@@ -262,6 +262,13 @@
         <td></td>
         <td></td>
     </tr>
+    <tr>
+    	<td>예산</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
 
