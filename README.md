@@ -257,21 +257,21 @@
     </tr>
     <tr>
     	<td>비밀지도</td>
-        <td></td>
+        <td>124 나라의 숫자</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>예산</td>
-        <td></td>
+        <td>기능 개발</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>콜라츠 추측</td>
-        <td></td>
+        <td>다리를 지나는 트럭</td>
         <td></td>
         <td></td>
         <td></td>
