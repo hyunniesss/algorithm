@@ -269,6 +269,13 @@
         <td></td>
         <td></td>
     </tr>
+    <tr>
+    	<td>콜라츠 추측</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
 
 
