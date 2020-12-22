@@ -222,28 +222,28 @@
     </tr>
     <tr>
     	<td>내적</td>
-        <td></td>
+        <td>프린터</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>3진법 뒤집기</td>
-        <td></td>
+        <td>스킬트리</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>키패드 누르기</td>
-        <td></td>
+        <td>영어끝말잇기</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>실패율</td>
-        <td></td>
+        <td>점프와 순간이동</td>
         <td></td>
         <td></td>
         <td></td>
@@ -277,5 +277,6 @@
         <td></td>
     </tr>
 </table>
+
 
 
