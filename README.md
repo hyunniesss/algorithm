@@ -250,7 +250,7 @@
     </tr>
     <tr>
     	<td>다트게임</td>
-        <td></td>
+        <td>멀쩡한 사각형</td>
         <td></td>
         <td></td>
         <td></td>

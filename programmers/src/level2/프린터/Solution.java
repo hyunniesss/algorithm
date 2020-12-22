@@ -6,12 +6,15 @@ import java.util.List;
 public class Solution {
 
 	public static void main(String[] args) {
-		int[] priorities = { 2, 1, 3, 2 };
-		int location = 2;
+		int[] priorities = { 1,2,3,1,3,1,4, 9, 1,3,4,2,2 };
+		int location = 0;
 		System.out.println(solution(priorities, location));
-		priorities = new int[] { 1, 1, 9, 1, 1, 1 };
-		location = 0;
-		System.out.println(solution(priorities, location));
+//		priorities = new int[] { 1, 1, 9, 1, 1, 1 };
+//		location = 0;
+//		System.out.println(solution(priorities, location));
+//		priorities = new int[] { 2,2,2,2 };
+//		location = 2;
+//		System.out.println(solution(priorities, location));
 	}
 
 	public static int solution(int[] priorities, int location) {
