@@ -278,60 +278,69 @@
     </tr>
     <tr>
     	<td>내적</td>
-        <td></td>
+        <td>프린터</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>3진법 뒤집기</td>
-        <td></td>
+        <td>스킬트리</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>키패드 누르기</td>
-        <td></td>
+        <td>영어끝말잇기</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>실패율</td>
-        <td></td>
+        <td>점프와 순간이동</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>다트게임</td>
-        <td></td>
+        <td>멀쩡한 사각형</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>비밀지도</td>
-        <td></td>
+        <td>124 나라의 숫자</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>예산</td>
-        <td></td>
+        <td>기능 개발</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
     	<td>콜라츠 추측</td>
+        <td>다리를 지나는 트럭</td>
         <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td></td>
+        <td>주식 가격</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
 </table>
+
+
 
 
