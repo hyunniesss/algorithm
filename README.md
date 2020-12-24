@@ -276,7 +276,15 @@
         <td></td>
         <td></td>
     </tr>
+    <tr>
+    	<td></td>
+        <td>주식 가격</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
+
 
 
 
