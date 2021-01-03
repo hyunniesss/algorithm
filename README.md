@@ -94,12 +94,12 @@
         <td></td>
         <td>Q1463 1로 만들기</td>
         <td>Q9012 괄호</td>
-        <td></td>
+        <td>Q1010 다리 놓기</td>
     </tr>
     <tr>
     	<td></td>
         <td></td>
-        <td></td>
+        <td>Q1004 어린 왕자</td>
         <td>Q1978 소수 찾기</td>
         <td></td>
     </tr>
@@ -110,7 +110,15 @@
         <td>Q2485 가로수</td>
         <td></td>
     </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td>Q1002 터렛</td>
+        <td></td>
+    </tr>
 </table>
+
 
 
 
