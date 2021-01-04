@@ -126,11 +126,12 @@
     <tr>
     	<td></td>
         <td></td>
-        <td></td>
+        <td>Q11727 2xn 타일링 2</td>
         <td>Q1002 터렛</td>
         <td></td>
     </tr>
 </table>
+
 
 
 
