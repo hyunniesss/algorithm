@@ -2,6 +2,19 @@
 
 ## BOJ 
 
+#### NOT RATED
+
+<table>
+    <tr>
+    	<th>Not Ratable</th>
+    </tr>
+    <tr>
+    	<td>Q1237 정ㅋ벅ㅋ</td>
+    </tr>
+</table>
+
+
+
 #### BRONZE
 
 <table>
@@ -106,7 +119,7 @@
     <tr>
     	<td></td>
         <td></td>
-        <td></td>
+        <td>Q2579 계단 오르기</td>
         <td>Q2485 가로수</td>
         <td></td>
     </tr>
@@ -118,11 +131,6 @@
         <td></td>
     </tr>
 </table>
-
-
-
-
-
 
 
 
