@@ -2,51 +2,41 @@ package silver4.B2485;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
-/**
- * @author hyunhee 가로수의 수 : N(3≤N≤100,000) N개의 줄 : 각 줄마다 심어져 있는 가로수의 위치 (
- *         100,000,000 이하 )
- * 
- */
 public class Main {
-
-	static List<Integer> trees = new ArrayList<>();
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
+		int[] trees = new int[N];
 		for (int n = 0; n < N; n++) {
-			trees.add(Integer.parseInt(br.readLine()));
+			trees[n] = Integer.parseInt(br.readLine());
 		}
-		Collections.sort(trees);
-		while (true) {
-			int dif = trees.get(1) - trees.get(0);
-			int temp = trees.get(0);
-			int size = trees.size();
-			for (int i = 1; i < trees.size(); i++) {
-				int difference = trees.get(i) - temp;
-				temp = trees.get(i);
-				dif = dif < difference ? dif : difference;
-			}
-			for (int i = 0; i < trees.size() - 1; i++) {
-				int plusTree = trees.get(i) + dif;
-				if (trees.contains(plusTree)) {
-					continue;
-				}
-				trees.add(i, plusTree);
-				i--;
-			}
-			Collections.sort(trees);
-			if (size == trees.size()) {
-				break;
-			}
+		int[] dif = new int[N - 1];
+		for (int n = 0; n < N - 1; n++) {
+			dif[n] = trees[n + 1] - trees[n];
 		}
+		Arrays.sort(dif);
+		int gcd = dif[0];
+		for(int n=1;n<N-1;n++) {
+			gcd = gcd(gcd, dif[n]);
+		}
+		int sum = 0;
+		for (int n = 0; n < N - 1; n++) {
+			sum += dif[n] / gcd - 1;
+		}
+		System.out.println(sum);
 
-		System.out.println(trees.size() - N);
+	}
+
+	private static int gcd(int a, int b) {
+		while (b > 0) {
+			int tmp = a;
+			a = b;
+			b = tmp % b;
+		}
+		return a;
 	}
 
 }
