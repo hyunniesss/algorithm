@@ -165,9 +165,17 @@
         <td></td>
         <td></td>
         <td></td>
+        <td>B10026 적록색약</td>
+    </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td></td>
     </tr>
 </table>
+
 
 
 
