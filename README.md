@@ -61,7 +61,7 @@
         <td>Q1181 단어 정렬</td>
     </tr>
     <tr>
-    	<td></td>
+    	<td>B14891 톱니바퀴</td>
         <td>Q1182 부분수열의 합</td>
         <td>Q9095 1,2,3 더하기</td>
         <td>Q10815 숫자 카드</td>
@@ -126,11 +126,21 @@
     <tr>
     	<td></td>
         <td></td>
-        <td></td>
+        <td>Q11727 2xn 타일링 2</td>
         <td>Q1002 터렛</td>
         <td></td>
     </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td>B20309 트리플 소트</td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
+
+
+
 
 
 
@@ -162,10 +172,19 @@
     	<td></td>
         <td></td>
         <td></td>
+        <td>B16397 탈출</td>
+        <td>B10026 적록색약</td>
+    </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
     </tr>
 </table>
+
+
 
 
 
@@ -295,7 +314,7 @@
     <tr>
     	<td>내적</td>
         <td>프린터</td>
-        <td></td>
+        <td>네트워크</td>
         <td></td>
         <td></td>
     </tr>
@@ -356,6 +375,7 @@
         <td></td>
     </tr>
 </table>
+
 
 
 
