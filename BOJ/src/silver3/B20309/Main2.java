@@ -1,4 +1,4 @@
-package B20309;
+package silver3.B20309;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

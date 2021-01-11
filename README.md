@@ -130,7 +130,15 @@
         <td>Q1002 터렛</td>
         <td></td>
     </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td>B20309 트리플 소트</td>
+        <td></td>
+        <td></td>
+    </tr>
 </table>
+
 
 
 
@@ -164,7 +172,7 @@
     	<td></td>
         <td></td>
         <td></td>
-        <td></td>
+        <td>B16397 탈출</td>
         <td>B10026 적록색약</td>
     </tr>
     <tr>
@@ -175,6 +183,7 @@
         <td></td>
     </tr>
 </table>
+
 
 
 
