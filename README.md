@@ -187,7 +187,7 @@
     	<td></td>
         <td></td>
         <td></td>
-        <td></td>
+        <td>Q6497 전력난</td>
         <td>Q13023 ABCDE</td>
     </tr>
     <tr>
@@ -198,6 +198,7 @@
         <td></td>
     </tr>
 </table>
+
 
 
 
