@@ -22,7 +22,6 @@ public class Solution {
 		for (int i = 0; i < t; i++) {
 			answer += numbers.charAt(i * m + p);
 		}
-		System.out.println(numbers);
 		return answer;
 	}
 
