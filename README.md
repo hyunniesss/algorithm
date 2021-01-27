@@ -429,11 +429,12 @@
 
 ## LEETCODE
 
-| 문제번호 | 문제이름                        |
-| -------- | ------------------------------- |
-| 1504     | Count_Submatrices_With_All_Ones |
-|          |                                 |
-|          |                                 |
+| 문제번호 | 문제이름                                      |
+| -------- | --------------------------------------------- |
+| 1296     | Divide_Array_in_Sets_of_K_Consecutive_Numbers |
+| 1504     | Count_Submatrices_With_All_Ones               |
+|          |                                               |
+|          |                                               |
 
 
 
