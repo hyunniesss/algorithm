@@ -33,6 +33,20 @@
         <td></td>
     </tr>
     <tr>
+    	<td>Q1032 명령 프롬프트</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+    	<td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
     	<td></td>
         <td></td>
         <td></td>
@@ -40,6 +54,7 @@
         <td></td>
     </tr>
 </table>
+
 
 
 
