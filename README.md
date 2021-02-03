@@ -187,7 +187,7 @@
     <tr>
     	<td></td>
         <td></td>
-        <td></td>
+        <td>Q16947 서울 지하철 2호선</td>
         <td>Q6497 전력난</td>
         <td>Q13023 ABCDE</td>
     </tr>
