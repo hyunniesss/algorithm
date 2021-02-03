@@ -34,7 +34,7 @@
     </tr>
     <tr>
     	<td>Q1032 명령 프롬프트</td>
-        <td></td>
+        <td>Q1100 하얀 칸</td>
         <td></td>
         <td></td>
         <td></td>
