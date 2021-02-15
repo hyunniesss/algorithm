@@ -24,47 +24,6 @@
 
 
 
-<table>
-    <tr>
-    	<th>BRONZE 1</th>
-        <th>BRONZE 2</th>
-        <th>BRONZE 3</th>
-        <th>BRONZE 4</th>
-        <th>BRONZE 5</th>
-    </tr>
-    <tr>
-    	<td>Q2750 수 정렬하기</td>
-        <td>Q16497 대출 요청</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-    	<td>Q1032 명령 프롬프트</td>
-        <td>Q1100 하얀 칸</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-    	<td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-    	<td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-
 
 #### SILVER
 
@@ -198,14 +157,6 @@
 </table>
 
 
-
-
-
-
-
-
-
-
 #### GOLD
 
 | GOLD 1 | GOLD 2 |          GOLD 3          |          GOLD 4          |      GOLD 5       |
@@ -215,12 +166,10 @@
 |        |        |    Q1167 트리의 지름     |       Q16397 탈출        |  Q10026 적록색약  |
 |        |        | Q16947 서울 지하철 2호선 |       Q6497 전력난       |   Q13023 ABCDE    |
 |        |        |                          |       Q4358 생태계       | Q1759 암호 만들기 |
+|        |        |                          |       Q1062 가르침       |                   |
 |        |        |                          |                          |                   |
 |        |        |                          |                          |                   |
 |        |        |                          |                          |                   |
-|        |        |                          |                          |                   |
-
-
 
 
 
