@@ -6,29 +6,26 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
-	
-	static int[][] paskal = new int[1001][1001];
+
+	static long[][] paskal;
 
 	public static void main(String[] args) throws Exception {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer str = new StringTokenizer(br.readLine(), " ");
-		Arrays.fill(paskal[1], 1);
 		int N = Integer.parseInt(str.nextToken());
 		int K = Integer.parseInt(str.nextToken());
-		System.out.println(combi(N,K));
-	}
-
-	private static int combi(int n, int k) {
-		if(k==0) {
-			return 1;
+		paskal = new long[N + 2][1001];
+		paskal[0][0] = 1;
+		paskal[1][0] = 1;
+		paskal[1][1] = 1;
+		for (int i = 2; i <= N; i++) {
+			paskal[i][0] = 1;
+			for (int k = 1; k <= i; k++) {
+				paskal[i][k] = (paskal[i - 1][k - 1] % 10007 + paskal[i - 1][k] % 10007) % 10007;
+			}
 		}
-		if(n<k) {
-			return 0;
-		}
-		return combi(n-1, k)%1007 + combi(n-1, k-1)%1007;
-		
+		System.out.println(paskal[N][K]);
 	}
-
 
 }
