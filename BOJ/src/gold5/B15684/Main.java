@@ -14,20 +14,20 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer str = new StringTokenizer(br.readLine(), " ");
 
-		N = Integer.parseInt(str.nextToken());
-		M = Integer.parseInt(str.nextToken());
-		H = Integer.parseInt(str.nextToken());
+		N = Integer.parseInt(str.nextToken()); // 세로선
+		M = Integer.parseInt(str.nextToken()); // 가로선 개수
+		H = Integer.parseInt(str.nextToken()); // 높이
 
 		map = new boolean[N][H];
 		for (int m = 0; m < M; m++) {
 			str = new StringTokenizer(br.readLine(), " ");
 			int h = Integer.parseInt(str.nextToken()) - 1;
 			int b = Integer.parseInt(str.nextToken()) - 1;
-			map[b][h] = true;
+			map[b][h] = true; // b 랑 b+1이 h높이에서 연결
 		}
 		int cnt = 0;
 		while (true) {
-			if (combi(0, cnt, 0)) {
+			if (combi(0, cnt, 0, 0)) {
 				break;
 			}
 			cnt++;
@@ -41,21 +41,22 @@ public class Main {
 
 	}
 
-	private static boolean combi(int cnt, int R, int cur) {
+	private static boolean combi(int cnt, int R, int cur, int h) { // 사다리 추가
 		if (cnt == R) {
 			return check();
 		}
 
-		for (int n = cur; n < N - 1; n++) {
-			for (int h = 0; h < H; h++) {
+		for (int n = cur; n < N - 1; n++) { // 현재 사다리 위치
+			for (; h < H; h++) {
 				if (!map[n][h]) {
 					map[n][h] = true;
-					if (combi(cnt + 1, R, n)) {
+					if (combi(cnt + 1, R, n, h + 1)) {
 						return true;
 					}
 					map[n][h] = false;
 				}
 			}
+			h = 0;
 		}
 
 		return false;
