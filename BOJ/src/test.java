@@ -1,10 +1,15 @@
+import java.io.IOException;
+
 public class test {
-	
-	public static void main(String[] args) {
-		
+
+
+	public static void main(String[] args) throws IOException {
+
 		System.out.println(input.equals(output));
+		
 	}
-	
+
+
 	static final String input = "1 2 3 4 5 6 \r\n" + 
 			"1 2 3 4 5 7 \r\n" + 
 			"1 2 3 4 6 7 \r\n" + 
@@ -41,7 +46,7 @@ public class test {
 			"2 3 8 13 21 34 \r\n" + 
 			"2 5 8 13 21 34 \r\n" + 
 			"3 5 8 13 21 34";
-	
+
 	static final String output = "1 2 3 4 5 6 \r\n" + 
 			"1 2 3 4 5 7 \r\n" + 
 			"1 2 3 4 6 7 \r\n" + 
