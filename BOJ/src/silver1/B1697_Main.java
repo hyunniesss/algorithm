@@ -1,4 +1,4 @@
-package B1697;
+package silver1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * @author hyunhee 가장 빠른 시간
  *
  */
-public class Main {
+public class B1697_Main {
 
 	static int N, K;
 	static boolean[] check = new boolean[200000];

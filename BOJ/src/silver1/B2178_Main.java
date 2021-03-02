@@ -1,4 +1,4 @@
-package B2178;
+package silver1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -8,11 +8,11 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 /**
- * 
- * @author hyunhee N, M(2 ≤ N, M ≤ 100) 최소 칸수 : bfs
+ * @author hyunhee 
+ * N, M(2 ≤ N, M ≤ 100) 최소 칸수 : bfs
  */
 
-public class Main {
+public class B2178_Main {
 
 	static boolean[][] map;
 	static int N, M;
