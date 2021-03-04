@@ -1,10 +1,10 @@
-package bronze3.B16561;
+package bronze3;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class B16561_Main {
 
 	static int N;
 	static int answer;

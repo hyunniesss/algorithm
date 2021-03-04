@@ -1,4 +1,4 @@
-package silver2.B11725;
+package silver2;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
