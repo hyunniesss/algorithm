@@ -1,4 +1,4 @@
-package silver1.B1303;
+package silver1;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B1303_Main {
 
 	static int R, C;
 	static char[][] map;

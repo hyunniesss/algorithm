@@ -1,4 +1,4 @@
-package silver1.B1927;
+package silver1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class B1927_Main {
 
 	static List<Integer> heap = new ArrayList<>();
 

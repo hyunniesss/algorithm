@@ -1,4 +1,4 @@
-package silver1.B2667;
+package silver1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -10,7 +10,7 @@ import java.util.Map;
  * @author hyunhee 5≤N≤25 1. 단지 나누기 2. map으로 key value 처리
  */
 
-public class Main_DFS2 {
+public class B2667_Main_DFS2 {
 
 	static int N;
 	static Map<Integer, Integer> home = new HashMap<>();
@@ -49,10 +49,6 @@ public class Main_DFS2 {
 			System.out.println(count[i]);
 		}
 
-//		for (int i = 1; i <= danji; i++) {
-//			System.out.println("i번째 단지수 : " + home.get(i));
-//		}
-
 	}
 
 	static int[][] dirs = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
@@ -60,7 +56,6 @@ public class Main_DFS2 {
 	private static void dfs(int r, int c) {
 		int cnt = home.remove(danji);
 		home.put(danji, cnt + 1);
-//		System.out.println(home.get(danji));
 
 		int nr, nc;
 

@@ -1,4 +1,4 @@
-package silver1.B2667;
+package silver1;
 
 /**
  * @author hyunhee
@@ -12,7 +12,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main_dfs {
+public class B2667_Main_DFS {
 
 	static int homeCNT = 2;
 	static int N;

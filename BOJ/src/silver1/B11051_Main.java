@@ -1,11 +1,11 @@
-package silver1.B11051;
+package silver1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B11051_Main {
 
 	static long[][] paskal;
 

@@ -1,4 +1,4 @@
-package silver1.B1058;
+package silver1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class Main {
+public class B1058_Main {
 
 	static List<Integer>[] friends;
 	static boolean[] check;

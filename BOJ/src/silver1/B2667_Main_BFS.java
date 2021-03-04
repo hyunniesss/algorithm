@@ -1,4 +1,4 @@
-package silver1.B2667;
+package silver1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class Main_bfs {
+public class B2667_Main_BFS {
 
 	static int N, cnt;
 	static char[][] map;

@@ -1,4 +1,4 @@
-package silver1.B1926;
+package silver1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_DFS {
+public class B1926_Main_DFS {
 
 	static int[][] map;
 	static int R, C;
