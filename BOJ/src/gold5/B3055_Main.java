@@ -1,4 +1,4 @@
-package gold5.B3055;
+package gold5;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B3055_Main {
 
 	static int R, C;
 	static char[][] map;

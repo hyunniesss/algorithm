@@ -1,4 +1,4 @@
-package gold3.B16947;
+package gold3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B16947_Main {
 
 	static int N;
 	static List<Integer>[] graph;

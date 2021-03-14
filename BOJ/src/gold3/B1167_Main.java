@@ -1,4 +1,4 @@
-package gold3.B1167;
+package gold3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B1167_Main {
 
 	static int V, max, index;
 	static List<int[]>[] graph; // 인접리스트 ([0] : 정점번호, [1] : 거리

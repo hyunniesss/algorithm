@@ -1,9 +1,9 @@
-package gold3.B1644;
+package gold3;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Main {
+public class B1644_Main {
 
 	static int answer;
 

@@ -1,4 +1,4 @@
-package silver2.B2210;
+package silver2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 
-public class Main {
+public class B2210_Main {
 
 	static String[][] map;
 	static boolean[][] check;
