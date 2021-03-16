@@ -1,4 +1,4 @@
-package gold4.B16397;
+package gold4;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_BFS {
+public class B16397_Main {
 
 //	static final int MAX = 100000;
 	static Queue<int[]> queue = new LinkedList<>();

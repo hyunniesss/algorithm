@@ -1,11 +1,11 @@
-package gold4.B1918;
+package gold4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class Main {
+public class B1918_Main {
 
 	static String[] operation = { "*/+-", "*/" };
 

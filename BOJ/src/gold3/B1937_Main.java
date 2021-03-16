@@ -1,10 +1,10 @@
-package gold3.B1937;
+package gold3;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B1937_Main {
 
 	static int N;
 	static int[][] dirs = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };

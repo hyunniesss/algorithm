@@ -1,4 +1,4 @@
-package gold4.B1197;
+package gold4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_Kruskal {
+public class B1197_Main_Kruskal {
 
 	static int V, E, result;
 	static int[] parents;
