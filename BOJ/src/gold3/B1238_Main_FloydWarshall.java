@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class B1238_Main {
+public class B1238_Main_FloydWarshall {
 
 	static int N, M, X;
 	static int[][] map;
