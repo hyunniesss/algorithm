@@ -1,9 +1,9 @@
-package gold4.B2661;
+package gold4;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Main {
+public class B2661_Main {
 
 	static int N;
 	static String answer = "";

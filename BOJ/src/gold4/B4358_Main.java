@@ -1,4 +1,4 @@
-package gold4.B4358;
+package gold4;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class B4358_Main {
 
 	public static void main(String[] args) throws IOException {
 
