@@ -1,4 +1,4 @@
-package gold4.B1504;
+package gold4;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B1504_Main {
 
 	static List<Edge>[] adj;
 	static int V, E;

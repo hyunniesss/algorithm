@@ -1,11 +1,11 @@
-package bronze3.B2444;
+package bronze3;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Main {
+public class B2444_Main {
 
 	public static void main(String[] args) throws Exception {
 
