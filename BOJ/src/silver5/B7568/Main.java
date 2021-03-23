@@ -6,36 +6,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.StringTokenizer;
 
 public class Main {
 
-	static class Person implements Comparable<Person> {
-		int height;
-		int weight;
-		int index;
-
-		public Person(int height, int weight, int index) {
-			this.height = height;
-			this.weight = weight;
-			this.index = index;
-		}
-
-		@Override
-		public int compareTo(Person o) {
-			if (this.height > o.height && this.weight > o.weight) {
-				return -1;
-			} else if (this.height < o.height && this.weight < o.weight) {
-				return 1;
-			}
-			return 0;
-		}
-
-	}
-
 	static int N;
 	static int[] rank;
-	static Person[] people;
+	static int[][] people;
 
 	public static void main(String[] args) throws Exception {
 
@@ -44,36 +22,28 @@ public class Main {
 
 		N = Integer.parseInt(br.readLine()); // 사람 수
 		rank = new int[N];
-		people = new Person[N];
+		people = new int[N][3]; // index, weight, height
 
 		for (int n = 0; n < N; n++) {
 			StringTokenizer str = new StringTokenizer(br.readLine(), " ");
-			int x = Integer.parseInt(str.nextToken()); // 몸무게
-			int y = Integer.parseInt(str.nextToken()); // 키
-			people[n] = new Person(y, x, n);
+			for (int i = 1; i < 3; i++) {
+				people[n][i] = Integer.parseInt(str.nextToken());
+			}
 		}
 
-		Arrays.sort(people);
-		rank[people[0].index] = 1;
-		int cnt = 1;
-
-		for (int i = 1; i < N; i++) {
-			Person p1 = people[i];
-			Person p2 = people[i - 1];
-
-			if (p2.weight <= p1.weight || p2.height <= p1.height) {
-				rank[p1.index] = rank[p2.index];
-				cnt++;
-			} else {
-				rank[p1.index] = rank[p2.index] + cnt;
-				cnt = 1;
+		for (int i = 0; i < N; i++) { // 나
+			for (int j = 0; j < N; j++) { // 비교대상
+				if (people[i][1] < people[j][1] && people[i][2] < people[j][2]) {
+					people[i][0]++;
+				}
 			}
 		}
 
 		for (int i = 0; i < N; i++) {
-			bw.write(rank[i] + " ");
+			bw.write((people[i][0] + 1) + " ");
 		}
 
+		bw.newLine();
 		bw.flush();
 
 	}
