@@ -5,43 +5,43 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /**
- * @author hyunhee N(1 ≤ N ≤ 10,000), M(1 ≤ M ≤ 300,000,000) A[x]는 30,000을 넘지 않는
- *         자연수
+ * 
+ * @author hyunhee N(1 ≤ N ≤ 10,000), M(1 ≤ M ≤ 300,000,000)
  */
 
 public class Main {
 
-	static int N;
-	static long M;
-	static int[] A;
-
 	public static void main(String[] args) throws Exception {
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer str = new StringTokenizer(br.readLine(), " ");
-		N = Integer.parseInt(str.nextToken());
-		M = Long.parseLong(str.nextToken());
-		A = new int[N];
+		int N = Integer.parseInt(str.nextToken());
+		int M = Integer.parseInt(str.nextToken());
 
+		int[] arr = new int[N];
 		str = new StringTokenizer(br.readLine(), " ");
-		for (int n = 0; n < N; n++) {
-			A[n] = Integer.parseInt(str.nextToken());
+		for (int i = 0; i < N; i++) {
+			arr[i] = Integer.parseInt(str.nextToken());
 		}
-		int answer = 0;
 
-		for (int f = 0; f < N; f++) {
-			long sum = 0;
-			for (int b = f + 1; b <= N; b++) {
-				sum += A[b - 1];
-				if (sum > M) {
-					break;
-				} else if (sum == M) {
-					answer++;
-					break;
-				}
+		int start = 0, end = 0, result = 0, count = 0;
+		while (start < N) {
+
+			if (result > M || end == N) {
+				result -= arr[start];
+				start++;
+			} else {
+				result += arr[end];
+				end++;
 			}
+
+			if (result == M) {
+				count++;
+			}
+
 		}
-		
-		System.out.println(answer);
+
+		System.out.println(count);
 
 	}
 

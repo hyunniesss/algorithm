@@ -14,11 +14,11 @@ import java.util.StringTokenizer;
 
 public class Main {
 
-	static class Node {
+	static class Edge {
 		int end;
 		int price;
 
-		public Node(int end, int price) {
+		public Edge(int end, int price) {
 			this.end = end;
 			this.price = price;
 		}
@@ -26,7 +26,7 @@ public class Main {
 	}
 
 	static int[] distance;
-	static List<Node>[] adjList;
+	static List<Edge>[] adjList;
 	static int V, E;
 	static final int INF = Integer.MAX_VALUE;
 
@@ -56,7 +56,7 @@ public class Main {
 			int start = Integer.parseInt(str.nextToken());
 			int end = Integer.parseInt(str.nextToken());
 			int price = Integer.parseInt(str.nextToken());
-			adjList[start].add(new Node(end, price));
+			adjList[start].add(new Edge(end, price));
 		}
 
 		dijkstra(K);
@@ -72,25 +72,26 @@ public class Main {
 
 	private static void dijkstra(int start) {
 
-		PriorityQueue<Node> pq = new PriorityQueue<>(new Comparator<Node>() {
+		PriorityQueue<Edge> pq = new PriorityQueue<>(new Comparator<Edge>() {
 
 			@Override
-			public int compare(Node o1, Node o2) {
+			public int compare(Edge o1, Edge o2) {
 				return Integer.compare(o1.price, o2.price);
 			}
 		});
 
-		pq.add(new Node(start, 0));
+		pq.add(new Edge(start, 0));
 
 		while (!pq.isEmpty()) {
-			Node cur = pq.poll();
+			Edge cur = pq.poll();
 
 			for (int i = 0; i < adjList[cur.end].size(); i++) {
-				Node next = adjList[cur.end].get(i);
+				Edge next = adjList[cur.end].get(i);
 
 				if (distance[next.end] > cur.price + next.price) { // 지금 온 방법이 이전에 저장한 것보다 가중치가 낮으면
 					distance[next.end] = cur.price + next.price;
-					pq.add(new Node(next.end, distance[next.end]));
+					
+					pq.add(new Edge(next.end, distance[next.end]));
 				}
 			}
 
