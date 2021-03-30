@@ -1,4 +1,4 @@
-package gold5.B14226;
+package gold5;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,7 +7,7 @@ import java.io.OutputStreamWriter;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class B14226_Main {
 
 	static int S;
 	static boolean[][] check; // check[모니터값][클립보드값]

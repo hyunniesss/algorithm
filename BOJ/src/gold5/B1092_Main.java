@@ -1,4 +1,4 @@
-package gold5.B1092;
+package gold5;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B1092_Main {
 
 	static int N, M;
 	static List<Integer> cranes, boxes;

@@ -1,10 +1,10 @@
-package gold5.B15684;
+package gold5;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B15684_Main {
 
 	static int N, M, H;
 	static boolean[][] map;

@@ -1,10 +1,10 @@
-package gold5.B1342;
+package gold5;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class B1342_Main {
 
 	static char[] input;
 	static int len;

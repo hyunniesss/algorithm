@@ -1,4 +1,4 @@
-package gold5.B1600;
+package gold5;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B1600_Main {
 
 	static int K;
 	static int R, C;
