@@ -1,9 +1,12 @@
-package gold4.B1719;
+package gold5.B5972;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
@@ -26,82 +29,72 @@ public class Main {
 
 	}
 
-	static int[][] key;
-	static int[][] pi;
-	static List<Edge>[] adjList;
 	static int V, E;
+	static int[] key;
+	static List<Edge>[] adjList;
 
 	public static void main(String[] args) throws Exception {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
 		StringTokenizer str = new StringTokenizer(br.readLine(), " ");
 		V = Integer.parseInt(str.nextToken());
 		E = Integer.parseInt(str.nextToken());
+
 		adjList = new ArrayList[V + 1];
 		for (int i = 1; i <= V; i++) {
 			adjList[i] = new ArrayList<>();
 		}
-		key = new int[V + 1][V + 1];
-		pi = new int[V + 1][V + 1];
+
+		key = new int[V + 1];
+
+		int a, b, c;
+
 		for (int i = 0; i < E; i++) {
 			str = new StringTokenizer(br.readLine(), " ");
-			int a = Integer.parseInt(str.nextToken());
-			int b = Integer.parseInt(str.nextToken());
-			int c = Integer.parseInt(str.nextToken());
+			a = Integer.parseInt(str.nextToken());
+			b = Integer.parseInt(str.nextToken());
+			c = Integer.parseInt(str.nextToken());
+
 			adjList[a].add(new Edge(b, c));
 			adjList[b].add(new Edge(a, c));
 		}
 
-		for (int i = 1; i <= V; i++) {
-			dijkstra(i, key[i], pi[i]);
-		}
-
-		StringBuilder sb = new StringBuilder();
-		for (int i = 1; i <= V; i++) {
-			for (int j = 1; j <= V; j++) {
-				if (i == j) {
-					sb.append("- ");
-				} else {
-					sb.append(pi[i][j] + " ");
-				}
-			}
-			sb.append("\n");
-		}
-
-		System.out.println(sb.toString());
+		bw.write(dijkstra(1, V) + "");
+		bw.flush();
 
 	}
 
 	static final int INF = Integer.MAX_VALUE;
 
-	private static void dijkstra(int start, int[] dist, int[] parent) {
+	private static int dijkstra(int start, int end) {
 
-		Arrays.fill(key[start], INF);
-		dist[start] = 0;
-		parent[start] = start;
+		Arrays.fill(key, INF);
+		key[start] = 0;
 
 		PriorityQueue<Edge> pq = new PriorityQueue<>();
-		pq.add(new Edge(start, dist[start]));
+		pq.add(new Edge(start, key[start]));
 
 		while (!pq.isEmpty()) {
 			Edge cur = pq.poll();
-			if (dist[cur.v] < cur.cost) {
-				continue;
+
+			if (cur.v == end) {
+				break;
 			}
+
 			for (int i = 0; i < adjList[cur.v].size(); i++) {
 				Edge next = adjList[cur.v].get(i);
-
-				if (dist[next.v] > next.cost + cur.cost) {
-					dist[next.v] = next.cost + cur.cost;
-					if (cur.v == start) {
-						parent[next.v] = next.v;
-					} else {
-						parent[next.v] = parent[cur.v];
-					}
-					pq.add(new Edge(next.v, dist[next.v]));
+				if (key[next.v] > next.cost + cur.cost) {
+					pq.remove(next);
+					key[next.v] = next.cost + cur.cost;
+					next.cost = key[next.v];
+					pq.add(next);
 				}
 			}
 		}
+
+		return key[end];
 
 	}
 

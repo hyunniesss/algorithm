@@ -15,11 +15,12 @@ public class Heap {
 
 	private static void minHeap(int[] arr) {
 		int[] minHeap = new int[arr.length + 1];
+		
 		int idx = 0;
 
 		for (int i = 0; i < arr.length; i++) {
 			minHeap[++idx] = arr[i];
-
+			
 			for (int j = idx; j > 1; j--) {
 				if (minHeap[j / 2] > minHeap[j]) {
 					int temp = minHeap[j];
