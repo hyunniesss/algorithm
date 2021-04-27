@@ -1,4 +1,4 @@
-package bronze3.B2490;
+package bronze3;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B2490_Main {
 
 	static final int T = 3;
 
