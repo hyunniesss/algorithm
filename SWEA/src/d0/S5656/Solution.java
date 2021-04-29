@@ -2,13 +2,14 @@ package d0.S5656;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Solution {
 
-	static int T, N, R, C;
+	static int N, R, C;
 	static int[][] MAP;
 	static int[] position;
 	static StringBuilder sb = new StringBuilder();
@@ -18,7 +19,7 @@ public class Solution {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer str = null;
 
-		T = Integer.parseInt(br.readLine());
+		int T = Integer.parseInt(br.readLine());
 		for (int t = 1; t <= T; t++) {
 			str = new StringTokenizer(br.readLine(), " ");
 			N = Integer.parseInt(str.nextToken());
@@ -37,7 +38,7 @@ public class Solution {
 			}
 
 			// 중복허용한 cobination으로 N개의 위치를 골라
-			combi(0, 0);
+			permutation(0);
 
 			sb.append("#").append(t).append(" ").append(MIN).append("\n");
 		}
@@ -45,29 +46,56 @@ public class Solution {
 
 	}
 
-	private static void combi(int cnt, int cur) {
+	private static void permutation(int cnt) {
 		if (cnt == N) {
-			for (int r = 0; r < R; r++) {
-				for (int c = 0; c < C; c++) {
-					temp[r][c] = MAP[r][c];
-				}
-			}
-			for (int i = 0; i < N; i++) {
-				changeMAP(position[i]);
-			}
-			int count = 0;
-			for (int i = 0; i < R; i++) {
-				for (int j = 0; j < C; j++) {
-					count += temp[i][j] > 0 ? 1 : 0;
-				}
-			}
-			MIN = Math.min(MIN, count);
+			test();
 			return;
 		}
 
-		for (int i = cur; i < C; i++) {
+		for (int i = 0; i < C; i++) {
 			position[cnt] = i;
-			combi(cnt + 1, i);
+			permutation(cnt + 1);
+		}
+	}
+
+	private static void test() {
+
+		for (int r = 0; r < R; r++) {
+			for (int c = 0; c < C; c++) {
+				temp[r][c] = MAP[r][c];
+			}
+		}
+
+		for (int i = 0; i < N; i++) {
+			breakMap(position[i]);
+			changeMap();
+		}
+		int count = 0;
+		for (int i = 0; i < R; i++) {
+			for (int j = 0; j < C; j++) {
+				if (temp[i][j] > 0) {
+					count++;
+				}
+			}
+		}
+		MIN = Math.min(count, MIN);
+
+	}
+
+	private static void changeMap() {
+		Queue<int[]> queue = new LinkedList<>();
+		for (int c = 0; c < C; c++) {
+			queue.clear();
+			for (int r = R - 1; r >= 0; r--) {
+				if (temp[r][c] == 0) {
+					queue.offer(new int[] { r, c });
+				} else if (!queue.isEmpty()) {
+					int[] pref = queue.poll();
+					temp[pref[0]][pref[1]] = temp[r][c];
+					temp[r][c] = 0;
+					queue.offer(new int[] { r, c });
+				}
+			}
 		}
 
 	}
@@ -75,8 +103,9 @@ public class Solution {
 	static int MIN;
 	static int[][] temp;
 
-	private static void changeMAP(int c) {
+	static int[][] dirs = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
 
+	private static void breakMap(int c) {
 		int r = 0;
 		while (r < R && temp[r][c] == 0) {
 			r++;
@@ -84,36 +113,30 @@ public class Solution {
 		if (r == R) {
 			return;
 		}
-
-		breakMap(r, c);
-		renewalMap();
-
-	}
-
-	private static void renewalMap() {
-
-		for (int c = 0; c < C; c++) {
-			int r = R - 1, nr = r;
-			while (r >= 0 && nr >= 0) {
-				if (temp[nr][c] == 0) {
-					nr--;
-					continue;
-				}
-				temp[r][c] = temp[nr][c];
-				while (r >= 0 && temp[r][c] != 0) {
-					r--;
+		Queue<int[]> queue = new LinkedList<>();
+		queue.offer(new int[] { r, c });
+		while (!queue.isEmpty()) {
+			int[] cur = queue.poll();
+			int cnt = temp[cur[0]][cur[1]] - 1;
+			temp[cur[0]][cur[1]] = 0;
+			int nr, nc;
+			for (int d = 0; d < dirs.length; d++) {
+				nr = cur[0];
+				nc = cur[1];
+				for (int i = 1; i <= cnt; i++) {
+					nr += dirs[d][0];
+					nc += dirs[d][1];
+					if (isIn(nr, nc) && temp[nr][nc] > 0) {
+						queue.offer(new int[] { nr, nc });
+					}
 				}
 			}
-		}
 
+		}
 	}
 
-	static int[][] dirs = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
-
-	private static void breakMap(int r, int c) {
-
-		
-
+	private static boolean isIn(int r, int c) {
+		return r >= 0 && r < R && c >= 0 && c < C;
 	}
 
 }
