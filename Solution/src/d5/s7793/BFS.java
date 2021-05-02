@@ -9,8 +9,10 @@ public class BFS {
 	static int[][] dirs = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
 
 	public static void main(String[] args) {
-//		bfs1();
-//		bfs2();
+		bfs1();
+		System.out.println("==================================");
+		bfs2();
+		System.out.println("==================================");
 		bfs3();
 	}
 
@@ -99,7 +101,7 @@ public class BFS {
 				}
 			}
 		}
-		System.out.println("턴은 종료되었고 현재 남은 것은 : "+q);
+		System.out.println("턴은 종료되었고 현재 남은 것은 : " + q);
 	}
 
 	static boolean isIn(int r, int c) { // 맵 범위 체크

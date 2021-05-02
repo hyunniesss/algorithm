@@ -1,8 +1,8 @@
-package bronze4.B10797;
+package bronze4;
 
 import java.util.Scanner;
 
-public class Main {
+public class B10797_Main {
 	
 	public static void main(String[] args) {
 		
