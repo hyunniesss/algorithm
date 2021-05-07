@@ -1,93 +1,94 @@
 package level2.수식최대화;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.StringTokenizer;
 
 public class Solution {
 
-	String[] op = { "+", "-", "*" };
-	int[] priority;
+	final int N = 3;
+	int[] arr = new int[N];
+	String operations = "+-*";
+	ArrayList<Character> opList = new ArrayList<>();
+	ArrayList<Long> numList = new ArrayList<>();
 
 	public long solution(String expression) {
-		long answer = -1;
-		priority = new int[] { 1, 2, 3 };
+		StringTokenizer str = null;
+		long answer = 0;
+		for (int i = 0; i < N; i++) {
+			arr[i] = i;
+		}
 
 		do {
-			StringTokenizer numberSTR = new StringTokenizer(expression, "+-*");
-			StringTokenizer operationSTR = new StringTokenizer(expression, "0123456789");
-
-			List<String> exp = new ArrayList<>();
-			while (operationSTR.hasMoreTokens()) {
-				exp.add(numberSTR.nextToken());
-				exp.add(operationSTR.nextToken());
+			opList.clear();
+			numList.clear();
+			str = new StringTokenizer(expression, "01233456789"); // 연산자
+			while (str.hasMoreTokens()) {
+				opList.add(str.nextToken().charAt(0));
 			}
-			exp.add(numberSTR.nextToken());
-
-			for (int i = 0; i < 3; i++) {
-				String operation = op[priority[i] - 1];
-
-				int idx = exp.indexOf(operation);
-				while (idx >= 0) {
-					long num2 = Long.parseLong(exp.remove(idx + 1));
-					long num1 = Long.parseLong(exp.remove(idx - 1));
-					switch (operation) {
-					case "+":
-						num1 += num2;
-						break;
-					case "-":
-						num1 -= num2;
-						break;
-					case "*":
-						num1 *= num2;
-					}
-					exp.add(idx - 1, num1 + "");
-					exp.remove(idx);
-					idx = exp.indexOf(operation);
-				}
-
+			str = new StringTokenizer(expression, operations); // 숫자
+			while (str.hasMoreTokens()) {
+				numList.add(Long.parseLong(str.nextToken()));
 			}
-
-			answer = Math.max(answer, Math.abs(Long.parseLong(exp.get(0))));
-
-		} while (nextPermutation());
+			answer = Math.max(answer, calc());
+		} while (NP());
 
 		return answer;
 	}
 
-	private boolean nextPermutation() {
+	private long calc() {
 
-		// 1. 꼭짓점(i)찾기
-		int i = 2;
-		while (i > 0 && priority[i - 1] >= priority[i]) {
-			--i;
+		for (int i = 0; i < N; i++) {
+			char op = operations.charAt(arr[i]);
+			int idx;
+			while ((idx = opList.indexOf(op)) >= 0) {
+				opList.remove(idx);
+				long a = numList.remove(idx);
+				long b = numList.remove(idx);
+				switch (op) {
+				case '+':
+					numList.add(idx, a + b);
+					break;
+				case '-':
+					numList.add(idx, a - b);
+					break;
+				case '*':
+					numList.add(idx, a * b);
+				}
+			}
+		}
+
+		return Math.abs(numList.get(0));
+	}
+
+	private boolean NP() {
+
+		int i = N - 1;
+		while (i > 0 && arr[i - 1] > arr[i]) {
+			i--;
 		}
 		if (i == 0) {
 			return false;
 		}
 
-		// 2. 꼭지점과 맞바꿀 j 찾기
-		int j = 2;
-		while (priority[i - 1] >= priority[j]) {
+		int j = N - 1;
+		while (arr[i - 1] > arr[j]) {
 			j--;
 		}
 
-		// 3. i-1랑 j 교환
-		int temp = priority[i - 1];
-		priority[i - 1] = priority[j];
-		priority[j] = temp;
+		swap(i - 1, j);
 
-		// 4. i <=> k
-		int k = 2;
+		int k = N - 1;
 		while (i < k) {
-			temp = priority[i];
-			priority[i] = priority[k];
-			priority[k] = temp;
-			i++;
-			k--;
+			swap(i++, k--);
 		}
-
 		return true;
+	}
+
+	private void swap(int i, int j) {
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+
 	}
 
 }
