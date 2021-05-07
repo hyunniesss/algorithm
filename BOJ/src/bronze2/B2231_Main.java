@@ -1,8 +1,8 @@
-package bronze2.B2231;
+package bronze2;
 
 import java.util.Scanner;
 
-public class Main {
+public class B2231_Main {
 
 	static int N;
 
@@ -23,6 +23,7 @@ public class Main {
 			}
 		}
 		System.out.println(0);
+		sc.close();
 
 	}
 
