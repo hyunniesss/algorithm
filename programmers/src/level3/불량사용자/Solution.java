@@ -1,55 +1,76 @@
 package level3.불량사용자;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-
 public class Solution {
-	
-	HashMap<String, ArrayList<String>> hm = new HashMap<>();
-	ArrayList<String> list = new ArrayList<>();
-	final int N = 8;
-	boolean[] check = new boolean[N];
+
+	int N, M;
+	int answer = 0;
+	String[] a, b;
 
 	public int solution(String[] user_id, String[] banned_id) {
+		a = user_id;
+		b = banned_id;
+		N = user_id.length;
+		M = banned_id.length;
 
-		for (int i = 0; i < banned_id.length; i++) {
-			ArrayList<String> pref = hm.put(banned_id[i], new ArrayList<>());
-		}
-		
-		System.out.println(Arrays.toString(hm.keySet().toArray()));
-
-		for (int i = 0; i < banned_id.length; i++) {
-
-			for (int j = 0; j < user_id.length; j++) {
-				if (user_id[j].length() == banned_id[i].length()) {
-					boolean flag = true;
-					for (int k = 0; k < user_id[j].length(); k++) {
-						if (banned_id[i].charAt(k) == '*') {
-							continue;
-						}
-						if (banned_id[i].charAt(k) == user_id[j].charAt(k)) {
-							continue;
-						}
-						flag = false;
-						break;
-					}
-					if (flag) {
-						ArrayList<String> temp = hm.get(banned_id[i]);
-						temp.add(user_id[j]);
-						hm.put(banned_id[i], temp);
-					}
-
-				}
-			}
-		}
-
+//		1. combination으로 user_id에서 banned_id 개수만큼 골라
+		combi(new int[M], 0, 0);
+//		2. 조건에 맞으면 카운트
 
 		return answer;
 	}
 
-	int answer = 0;
+	private boolean check(int i, int j) {
+		if (b[j].length() != a[i].length()) {
+			return false;
+		}
+		for (int ii = 0; ii < a[i].length(); ii++) {
+			if (b[j].charAt(ii) == '*') {
+				continue;
+			}
+			if (b[j].charAt(ii) == a[i].charAt(ii)) {
+				continue;
+			}
+			return false;
+		}
 
-	
+		return true;
+	}
+
+	private void combi(int[] arr, int cur, int cnt) {
+
+		if (cnt == M) {
+			if (test(arr)) {
+				answer++;
+			}
+			return;
+		}
+
+		for (int i = cur; i < N; i++) {
+			arr[cnt] = i;
+			combi(arr, i + 1, cnt + 1);
+		}
+
+	}
+
+	private boolean test(int[] arr) {
+		boolean[] check = new boolean[M];	// banned_id
+
+		for (int j = 0; j < M; j++) {	// j가 후보 아이디
+			for (int i = 0; i < M; i++) {	// i가 banned_id
+				if (!check[i] && check(arr[j], i)) {
+					check[i] = true;
+					continue;
+				}
+			}
+		}
+
+		for (int i = 0; i < M; i++) {
+			if (!check[i]) {
+				return false;
+			}
+		}
+		return true;
+
+	}
 
 }
