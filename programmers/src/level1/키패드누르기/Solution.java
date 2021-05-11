@@ -2,83 +2,45 @@ package level1.키패드누르기;
 
 public class Solution {
 
-	public static void main(String[] args) {
-		int[] numbers = { 1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5 };
-		String hand = "right";
-		System.out.println(solution(numbers, hand));
-		numbers = new int[] { 7, 0, 8, 2, 8, 3, 1, 5, 7, 6, 2 };
-		hand = "left";
-		System.out.println("LRLLRRLLLRR".equals(solution(numbers, hand)));
-		System.out.println(solution(numbers, hand));
-		System.out.println("LRLLRRLLLRR");
-	}
+	final String keyPad = "123456789*0#";
 
-	public static String solution(int[] numbers, String hand) {
-		int[][] pos = new int[2][2]; // [0] : left row, col
-										// [1] : right row, col
-		pos[0][0] = 3;
-		pos[0][1] = 0;
-		pos[1][0] = 3;
-		pos[1][1] = 2;
+	public String solution(int[] numbers, String hand) {
 		StringBuilder answer = new StringBuilder();
+
+		int left = 9;
+		int right = 11;
+
 		for (int i : numbers) {
-			boolean[][] check = new boolean[4][3];
-			switch (i) {
-			case 1:
-				answer.append("L");
-				pos[0][0] = 0;
-				pos[0][1] = 0;
-				break;
-			case 4:
-				answer.append("L");
-				pos[0][0] = 1;
-				pos[0][1] = 0;
-				break;
-			case 7:
-				answer.append("L");
-				pos[0][0] = 2;
-				pos[0][1] = 0;
-				break;
-			case 3:
+			if (i > 0 && i % 3 == 0) { // 3, 6, 9
 				answer.append("R");
-				pos[1][0] = 0;
-				pos[1][1] = 2;
-				break;
-			case 6:
-				answer.append("R");
-				pos[1][0] = 1;
-				pos[1][1] = 2;
-				break;
-			case 9:
-				answer.append("R");
-				pos[1][0] = 2;
-				pos[1][1] = 2;
-				break;
-			default:
-				System.out.println("i는 " + i);
-				i = i == 0 ? 3 : i / 3;
-				int left = Math.abs(pos[0][0] - i) + Math.abs(pos[0][1] - 1);
-				int right = Math.abs(pos[1][0] - i) + Math.abs(pos[1][1] - 1);
-				if (left == right) {
-					answer.append(hand.toUpperCase().charAt(0));
-					if ('l' == hand.charAt(0)) {
-						pos[0][0] = i;
-						pos[0][1] = 1;
+				right = i - 1;
+			} else if (i % 3 == 1) { // 1, 4, 7
+				answer.append("L");
+				left = i - 1;
+			} else { // 2, 4, 6, 8, 0
+				int temp = keyPad.indexOf(i + "");
+//				거리 비교해야해
+				int tempA = Math.abs(left / 3 - temp / 3) + Math.abs(left % 3 - temp % 3);
+				int tempB = Math.abs(right / 3 - temp / 3) + Math.abs(right % 3 - temp % 3);
+				if (tempA == tempB) {
+					if ("left".equals(hand)) {
+						answer.append("L");
+						left = temp;
 					} else {
-						pos[1][0] = i;
-						pos[1][1] = 1;
+						answer.append("R");
+						right = temp;
 					}
-				} else if (left > right) {
-					answer.append("R");
-					pos[1][0] = i;
-					pos[1][1] = 1;
-				} else {
+				} else if (tempA < tempB) {
 					answer.append("L");
-					pos[0][0] = i;
-					pos[0][1] = 1;
+					left = temp;
+				} else {
+					answer.append("R");
+					right = temp;
 				}
+
 			}
 		}
+
 		return answer.toString();
 	}
 
