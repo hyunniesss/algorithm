@@ -1,4 +1,4 @@
-package silver1.B16953;
+package silver1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B1743_Main {
 
 	static int R, C, K, MAX = -1;
 	static boolean[][] MAP;
