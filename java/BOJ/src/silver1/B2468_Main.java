@@ -9,9 +9,9 @@ import java.util.StringTokenizer;
 
 public class B2468_Main {
 
-	static int N;
-	static int[][] MAP;
-	static boolean[][] check;
+	static int N;	// 행, 열
+	static int[][] MAP;	// 맵
+	static boolean[][] check;	// 체크배열
 	static int MAX;
 
 	public static void main(String[] args) {
