@@ -1,4 +1,4 @@
-package silver5.B1010;
+package silver5;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -16,7 +16,7 @@ import java.util.StringTokenizer;
  *
  */
 
-public class Main {
+public class B1010_Main {
 
 	static int T, N, R;
 	static StringBuilder sb = new StringBuilder();
