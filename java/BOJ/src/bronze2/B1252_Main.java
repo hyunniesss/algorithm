@@ -1,26 +1,28 @@
+package bronze2;
+
 import java.io.*;
 import java.util.*;
 
 public class B1252_Main {
-    static String[] input = new String[2];  // 입력받을 메모리
+    static String[] input = new String[2];  // �엯�젰諛쏆쓣 硫붾え由�
     static int temp;
     public static void main(String[] args) {
-        // 1. 입력 받기
+        // 1. �엯�젰 諛쏄린
         initInput();
-        int aLen = input[0].length();   //첫 번째 입력 길이
-        int bLen = input[1].length();   //두 번째 입력 길이
+        int aLen = input[0].length();   //泥� 踰덉㎏ �엯�젰 湲몄씠
+        int bLen = input[1].length();   //�몢 踰덉㎏ �엯�젰 湲몄씠
         int cLen = aLen < bLen ? aLen : bLen;
         StringBuilder answer = new StringBuilder();
-        temp = 0;   // 올림
+        temp = 0;   // �삱由�
         for(int i=0;i<cLen;i++){
             int plus = plusOp(i);
             answer.append(plus%2+"");
         }
-        for(int i=cLen;i<aLen;i++){ //bLen이 더 짧을 때
+        for(int i=cLen;i<aLen;i++){ //bLen�씠 �뜑 吏㏃쓣 �븣
             int plus = plusOp(i, 0);
             answer.append(plus%2+"");
         }
-        for(int i=cLen;i<bLen;i++){ // aLen이 더 짧을 때
+        for(int i=cLen;i<bLen;i++){ // aLen�씠 �뜑 吏㏃쓣 �븣
             int plus = plusOp(i, 1);
             answer.append(plus%2+"");
         }
