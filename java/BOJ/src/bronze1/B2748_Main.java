@@ -1,30 +1,29 @@
 package bronze1;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class B2748_Main {
 
-    static long[] arr = new long[3];
+	public static void main(String[] args) {
+		int N = initInput();
+		long answer = findFibo(N, new long[N + 1]);
+		System.out.println(answer);
+	}
 
-    public static void main(String[] args) {
-        int N = -1;
-        try{
-            N = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
-        } catch(Exception e){}
+	private static long findFibo(int N, long[] dp) {
+		if (N <= 1) {
+			return N;
+		}
+		if (dp[N] > 0) {
+			return dp[N];
+		}
+		return dp[N] = findFibo(N - 1, dp) + findFibo(N - 2, dp);
+	}
 
-        arr[1] = 1; arr[2] = 1;
-        if(N<2){
-            System.out.println(N);
-        } else {
-            N-=2;
-            while(N-- > 0){
-                arr[0] = arr[1];
-                arr[1] = arr[2];
-                arr[2] = arr[0] + arr[1];
-            }
-            System.out.println(arr[2]);
-        }
-    }
+	private static int initInput() {
+		try (Scanner sc = new Scanner(System.in)) {
+			return sc.nextInt();
+		}
+	}
 
 }
