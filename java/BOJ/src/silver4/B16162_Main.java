@@ -1,27 +1,31 @@
-package silver2;
+package silver4;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class B1912_Main {
+public class B16162_Main {
 
-	static int N;
+	static int N, A, D;
 
 	public static void main(String[] args) {
 		int[] arr = initInput();
-		int answer = findMaxVal(arr);
-		System.out.println(answer);
+		int max = getMaxNote(arr);
+		System.out.println(max);
 	}
 
-	private static int findMaxVal(int[] arr) {
-		int[] dp = new int[N + 1];
-		int max = -1000;
-		for (int i = 1; i <= N; i++) {
-			dp[i] = Math.max(dp[i - 1] + arr[i - 1], arr[i - 1]);
-			max = Math.max(dp[i], max);
+	private static int getMaxNote(int[] arr) {
+
+		int cnt = 0;
+		int next = A;
+		for (int i = 0; i < N; i++) {
+			if (arr[i] == next) {
+				cnt++;
+				next += D;
+			}
 		}
-		return max;
+		return cnt;
 	}
 
 	private static int[] initInput() {
@@ -30,15 +34,17 @@ public class B1912_Main {
 		StringTokenizer str = null;
 		int[] arr = null;
 		try {
-			N = Integer.parseInt(br.readLine());
+			str = new StringTokenizer(br.readLine(), " ");
+			N = Integer.parseInt(str.nextToken());
+			A = Integer.parseInt(str.nextToken());
+			D = Integer.parseInt(str.nextToken());
 			arr = new int[N];
 			str = new StringTokenizer(br.readLine(), " ");
 			for (int i = 0; i < N; i++) {
 				arr[i] = Integer.parseInt(str.nextToken());
 			}
-		} catch (Exception e) {
+		} catch (IOException e) {
 		}
-
 		return arr;
 	}
 

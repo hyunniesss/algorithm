@@ -4,18 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/**
- * @author hyunhee 
- * nCr = n! / r!(n-r)! = n-1Cr-1 + n-1Cr : 파스칼의 삼각형
- * memoization 써서 풀면 될듯
- *<입력> 
- *1) 입력의 첫 줄에는 테스트 케이스의 개수 T 
- *2) 강의 서쪽과 동쪽에 있는 사이트의 개수 정수 N, M (0 < N ≤ M < 30) 
- *<출력> 
- *각 테스트 케이스에 대해 주어진 조건하에 다리를 지을 수 있는 경우의 수를 출력
- *
- */
-
 public class B1010_Main {
 
 	static int T, N, R;

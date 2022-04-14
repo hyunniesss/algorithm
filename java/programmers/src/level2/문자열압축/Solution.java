@@ -18,6 +18,7 @@ public class Solution {
 					pref = cur;
 					count = 1;
 				}
+				
 				if (all.length() > answer) {
 					continue out;
 				}
